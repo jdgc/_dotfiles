@@ -1,0 +1,41 @@
+[restart]
+full_text=
+command=i3-msg -q restart
+
+[volume]
+command=$HOME/code/jdgc/scripts/volume-pulseaudio
+interval=once
+signal=1
+
+[text]
+command=$HOME/code/jdgc/scripts/scroll.sh
+markup=pango
+interval=repeat
+
+[mem]
+label= 
+command=$HOME/code/jdgc/scripts/mem_process_script.sh
+interval=10
+
+[cpu]
+label= 
+command=$HOME/code/jdgc/scripts/cpu_usage.sh
+interval=10
+
+[wifi]
+command=nm-applet
+interval=once
+
+[weather]
+command=curl -Ss "wttr.in?format=3"
+interval=3600
+
+[time]
+command=LANG=en_GB date "+%A %B %d, %I:%M:%S %p"
+interval=1
+
+[battery]
+command=$HOME/code/jdgc/scripts/battery.py
+markup=pango
+interval=30
+
